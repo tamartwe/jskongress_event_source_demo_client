@@ -1,0 +1,13 @@
+<h2>Newsfeed</h2>
+<ul class="twitts">
+    <li *ngFor="let twitt of twitts">
+        <a class="link" routerLink="/twitt/{{twitt.id}}">
+          <div>
+              {{twitt.text}}
+             </div>
+             <div>
+                 {{twitt.username}}
+             </div>
+        </a>
+  </li>
+</ul>
