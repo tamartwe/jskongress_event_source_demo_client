@@ -1,5 +1,6 @@
+import { User } from './user';
+
 export class Twitt {
-    id: number;
     text: string;
-    username: string;
+    user: User;
   }

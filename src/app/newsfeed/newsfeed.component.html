@@ -2,11 +2,11 @@
 <ul class="twitts">
     <li *ngFor="let twitt of twitts">
         <a class="link" routerLink="/twitt/{{twitt.id}}">
-          <div>
+          <div class="twitt_text">
               {{twitt.text}}
              </div>
              <div>
-                 {{twitt.username}}
+                 {{twitt.user.username}}
              </div>
         </a>
   </li>

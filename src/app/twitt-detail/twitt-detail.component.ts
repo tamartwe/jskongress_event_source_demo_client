@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
  
 import { TwittService }  from '../twitt.service';
+import { mainUser } from '../mainUser';
  
 
 @Component({
@@ -25,8 +26,8 @@ export class TwittDetailComponent implements OnInit {
     }
    
     getTwitt(): void {
-      const id = +this.route.snapshot.paramMap.get('id');
-      this.twittService.getTwitt(id)
+      const text = this.route.snapshot.paramMap.get('text');
+      this.twittService.getTwitt(mainUser._id, text)
         .subscribe(twitt => this.twitt = twitt);
     }
    

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Twitt } from '../twitt';
 import { TwittService } from '../twitt.service';
+import { mainUser } from '../mainUser';
 
 @Component({
   selector: 'app-newsfeed',
@@ -18,7 +19,7 @@ export class NewsfeedComponent implements OnInit {
   }
  
   getTwitts(): void {
-    this.twittService.getTwitts()
+    this.twittService.getTwitts(mainUser._id)
     .subscribe(twitts => this.twitts = twitts);
   }
   
